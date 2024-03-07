@@ -64,7 +64,6 @@ function getSoapEnvelope(request) {
     '               xmlns:xsd="http://www.w3.org/2001/XMLSchema"' +
     '               xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"' +
     '               xmlns:t="http://schemas.microsoft.com/exchange/services/2006/types">' +
-    '               xmlns:m="https://schemas.microsoft.com/exchange/services/2006/messages">' +
     '  <soap:Header>' +
     '    <RequestServerVersion Version="Exchange2016"/>' +
     '  </soap:Header>' +
