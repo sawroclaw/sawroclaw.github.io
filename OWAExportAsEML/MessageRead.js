@@ -79,11 +79,13 @@ function getSoapEnvelope(request) {
 
 function GetItem() {
     var results =
-  '  <GetItem xmlns="http://schemas.microsoft.com/exchange/services/2006/messages">' +
+  '  <GetItem' +
+  '     xmlns="http://schemas.microsoft.com/exchange/services/2006/messages"' +
+  '     xmlns:t="https://schemas.microsoft.com/exchange/services/2006/types">' +
   '    <ItemShape>' +
   '      <t:BaseShape>IdOnly</t:BaseShape>' +
   '      <t:IncludeMimeContent>true</t:IncludeMimeContent>' +
-  '      <AdditionalProperties xmlns="http://schemas.microsoft.com/exchange/services/2006/types">' +
+  '      <AdditionalProperties>' +
   '        <FieldURI FieldURI="item:Subject" />' +
   '      </AdditionalProperties>' +
   '    </ItemShape>' +
