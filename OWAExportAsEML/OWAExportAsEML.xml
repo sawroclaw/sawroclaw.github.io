@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!--Created:ce44715c-8c4e-446b-879c-ea9ebe0f09c8-->
-<OfficeApp 
-          xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-          xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" 
-          xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0" 
+<OfficeApp
+          xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+          xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
           xsi:type="MailApp">
 
   <!-- Begin Basic Settings: Add-in metadata, used for all versions of Office unless override provided. -->
@@ -14,18 +14,18 @@
 
   <!--Version. Updates from the store only get triggered if there is a version change. -->
   <Version>1.0.0.0</Version>
-  <ProviderName>MSGDevelop Glen Scales - gscales@msgdevelop.com</ProviderName>
-  <DefaultLocale>en-US</DefaultLocale>
+  <ProviderName>Rafal Sulkowski - rafal.sulkowski@wroclaw.sa.gov.pl</ProviderName>
+  <DefaultLocale>pl-PL</DefaultLocale>
   <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
-  <DisplayName DefaultValue="Export to EML" />
-  <Description DefaultValue="Export to EML"/>
-  <IconUrl DefaultValue="https://gscales.github.io/OWAExportAsEML/Images/Icon64.png"/>
+  <DisplayName DefaultValue="Eksport do EML" />
+  <Description DefaultValue="Eksport do EML"/>
+  <IconUrl DefaultValue="https://sawroclaw.github.io/OWAExportAsEML/Images/Icon64.png"/>
 
-  <SupportUrl DefaultValue="http://www.msgdevelop.com" />
+  <SupportUrl DefaultValue="https://jira.ad.ms.gov.pl" />
   <!-- Domains that will be allowed when navigating. For example, if you use ShowTaskpane and then have an href link, navigation will only be allowed if the domain is on this list. -->
 
   <!--End Basic Settings. -->
- 
+
   <Hosts>
     <Host Name="Mailbox" />
   </Hosts>
@@ -37,7 +37,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://gscales.github.io/OWAExportAsEML/MessageRead.html"/>
+        <SourceLocation DefaultValue="https://sawroclaw.github.io/OWAExportAsEML/MessageRead.html"/>
         <RequestedHeight>450</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -96,22 +96,22 @@
 
     <Resources>
       <bt:Images>
-        <bt:Image id="icon16" DefaultValue="https://gscales.github.io/OWAExportAsEML/Images/Icon16.png"/>
-        <bt:Image id="icon32" DefaultValue="https://gscales.github.io/OWAExportAsEML/Images/Icon32.png"/>
-        <bt:Image id="icon80" DefaultValue="https://gscales.github.io/OWAExportAsEML/Images/Icon80.png"/>
+        <bt:Image id="icon16" DefaultValue="https://sawroclaw.github.io/OWAExportAsEML/Images/Icon16.png"/>
+        <bt:Image id="icon32" DefaultValue="https://sawroclaw.github.io/OWAExportAsEML/Images/Icon32.png"/>
+        <bt:Image id="icon80" DefaultValue="https://sawroclaw.github.io/OWAExportAsEML/Images/Icon80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="functionFile" DefaultValue="https://gscales.github.io/OWAExportAsEML/Functions/FunctionFile.html"/>
-        <bt:Url id="messageReadTaskPaneUrl" DefaultValue="https://gscales.github.io/OWAExportAsEML/MessageRead.html"/>
+        <bt:Url id="functionFile" DefaultValue="https://sawroclaw.github.io/OWAExportAsEML/Functions/FunctionFile.html"/>
+        <bt:Url id="messageReadTaskPaneUrl" DefaultValue="https://sawroclaw.github.io/OWAExportAsEML/MessageRead.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue=" "/>
         <bt:String id="customTabLabel"  DefaultValue=" "/>
-        <bt:String id="paneReadButtonLabel" DefaultValue="Export message to EML"/>
-        <bt:String id="paneReadSuperTipTitle" DefaultValue="Export message to EML"/>
+        <bt:String id="paneReadButtonLabel" DefaultValue="Eksport wiadomości do EML"/>
+        <bt:String id="paneReadSuperTipTitle" DefaultValue="Eksport wiadomości do EML"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="paneReadSuperTipDescription" DefaultValue="Opens a pane "/>
+        <bt:String id="paneReadSuperTipDescription" DefaultValue="Otwiera okienko "/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
