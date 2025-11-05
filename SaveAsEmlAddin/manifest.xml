@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+           xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
+           xsi:type="MailApp">
+  <Id>881ab629-b921-4fdb-96b9-37e1b63db4d0</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Sąd Apelacyjny we Wrocławiu</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Save as EML"/>
+  <Description DefaultValue="Save the email including headers and attachments as .eml"/>
+  <IconUrl DefaultValue="https://sawroclaw.github.io/icon32.png"/>
+  <SupportUrl DefaultValue="https://yourserver.local/support"/>
+  <Hosts>
+    <Host Name="Mailbox"/>
+  </Hosts>
+  <Requirements>
+    <Sets DefaultMinVersion="1.5">
+      <Set Name="Mailbox" MinVersion="1.5"/>
+    </Sets>
+  </Requirements>
+  <FormSettings>
+    <Form xsi:type="ItemRead">
+      <DesktopSettings>
+        <SourceLocation DefaultValue="https://sawroclaw.github.io/index.html"/>
+      </DesktopSettings>
+      <TabletSettings>
+        <SourceLocation DefaultValue="https://sawroclaw.github.io/index.html"/>
+      </TabletSettings>
+      <PhoneSettings>
+        <SourceLocation DefaultValue="https://sawroclaw.github.io/index.html"/>
+      </PhoneSettings>
+    </Form>
+  </FormSettings>
+  <Permissions>ReadItem</Permissions>
+  <Rule xsi:type="RuleCollection" Mode="Or">
+    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read"/>
+  </Rule>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
+                    xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="MailHost">
+        <DesktopFormFactor>
+          <ExtensionPoint xsi:type="MessageReadCommandSurface">
+            <OfficeCommandSurface>
+              <Control xsi:type="Button" id="saveAsEmlButton">
+                <Label resid="buttonLabel"/>
+                <Supertip>
+                  <Title resid="buttonLabel"/>
+                  <Description resid="buttonTooltip"/>
+                </Supertip>
+                <Icon>
+                  <bt:Image size="16" resid="icon16"/>
+                  <bt:Image size="32" resid="icon32"/>
+                </Icon>
+                <Action xsi:type="ExecuteFunction">
+                  <FunctionName>saveAsEml</FunctionName>
+                </Action>
+              </Control>
+            </OfficeCommandSurface>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="icon16" DefaultValue="https://sawroclaw.github.io/icon16.png"/>
+        <bt:Image id="icon32" DefaultValue="https://sawroclaw.github.io/icon32.png"/>
+      </bt:Images>
+      <bt:ShortStrings>
+        <bt:String id="buttonLabel" DefaultValue="Save as EML"/>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="buttonTooltip" DefaultValue="Save this email (headers+attachments) as .eml"/>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>
