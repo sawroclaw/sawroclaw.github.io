@@ -73,7 +73,7 @@
         <bt:Image id="icon80" DefaultValue="https://sawroclaw.github.io/SaveAsEmlAddin/icon80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="taskpaneUrl" DefaultValue="https://sawroclaw.github.io/index.html"/>
+        <bt:Url id="taskpaneUrl" DefaultValue="https://sawroclaw.github.io/SaveAsEmlAddin/index.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="buttonLabel" DefaultValue="Save as EML"/>
