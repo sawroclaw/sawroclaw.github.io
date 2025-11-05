@@ -34,26 +34,34 @@
   </Rule>
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides"
                     xsi:type="VersionOverridesV1_0">
+    <Requirements>
+      <bt:Sets DefaultMinVersion="1.5">
+        <bt:Set Name="Mailbox" MinVersion="1.5"/>
+      </bt:Sets>
+    </Requirements>
     <Hosts>
       <Host xsi:type="MailHost">
         <DesktopFormFactor>
           <ExtensionPoint xsi:type="MessageReadCommandSurface">
-            <OfficeCommandSurface>
-              <Control xsi:type="Button" id="saveAsEmlButton">
-                <Label resid="buttonLabel"/>
-                <Supertip>
-                  <Title resid="buttonLabel"/>
-                  <Description resid="buttonTooltip"/>
-                </Supertip>
-                <Icon>
-                  <bt:Image size="16" resid="icon16"/>
-                  <bt:Image size="32" resid="icon32"/>
-                </Icon>
-                <Action xsi:type="ExecuteFunction">
-                  <FunctionName>saveAsEml</FunctionName>
-                </Action>
-              </Control>
-            </OfficeCommandSurface>
+            <OfficeTab id="TabDefault">
+              <Group id="msgReadGroup">
+                <Label resid="groupLabel"/>
+                <Control xsi:type="Button" id="saveAsEmlButton">
+                  <Label resid="buttonLabel"/>
+                  <Supertip>
+                    <Title resid="buttonLabel"/>
+                    <Description resid="buttonTooltip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="icon16"/>
+                    <bt:Image size="32" resid="icon32"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <SourceLocation resid="taskpaneUrl"/>
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
           </ExtensionPoint>
         </DesktopFormFactor>
       </Host>
@@ -63,11 +71,15 @@
         <bt:Image id="icon16" DefaultValue="https://sawroclaw.github.io/icon16.png"/>
         <bt:Image id="icon32" DefaultValue="https://sawroclaw.github.io/icon32.png"/>
       </bt:Images>
+      <bt:Urls>
+        <bt:Url id="taskpaneUrl" DefaultValue="https://sawroclaw.github.io/index.html"/>
+      </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="buttonLabel" DefaultValue="Save as EML"/>
+        <bt:String id="groupLabel" DefaultValue="Save Tools"/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="buttonTooltip" DefaultValue="Save this email (headers+attachments) as .eml"/>
+        <bt:String id="buttonTooltip" DefaultValue="Save this email (headers + attachments) as .eml"/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
