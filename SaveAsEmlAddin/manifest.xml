@@ -10,7 +10,7 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Save as EML"/>
   <Description DefaultValue="Save the email including headers and attachments as .eml"/>
-  <IconUrl DefaultValue="https://sawroclaw.github.io/icon32.png"/>
+  <IconUrl DefaultValue="https://sawroclaw.github.io/SaveAsEmlAddin/icon32.png"/>
   <SupportUrl DefaultValue="https://yourserver.local/support"/>
   <Hosts>
     <Host Name="Mailbox"/>
@@ -23,7 +23,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://sawroclaw.github.io/index.html"/>
+        <SourceLocation DefaultValue="https://sawroclaw.github.io/SaveAsEmlAddin/index.html"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -68,9 +68,9 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="icon16" DefaultValue="https://sawroclaw.github.io/icon16.png"/>
-        <bt:Image id="icon32" DefaultValue="https://sawroclaw.github.io/icon32.png"/>
-        <bt:Image id="icon80" DefaultValue="https://sawroclaw.github.io/icon80.png"/>
+        <bt:Image id="icon16" DefaultValue="https://sawroclaw.github.io/SaveAsEmlAddin/icon16.png"/>
+        <bt:Image id="icon32" DefaultValue="https://sawroclaw.github.io/SaveAsEmlAddin/icon32.png"/>
+        <bt:Image id="icon80" DefaultValue="https://sawroclaw.github.io/SaveAsEmlAddin/icon80.png"/>
       </bt:Images>
       <bt:Urls>
         <bt:Url id="taskpaneUrl" DefaultValue="https://sawroclaw.github.io/index.html"/>
