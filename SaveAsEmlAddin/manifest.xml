@@ -24,12 +24,15 @@
     <Form xsi:type="ItemRead">
       <DesktopSettings>
         <SourceLocation DefaultValue="https://sawroclaw.github.io/index.html"/>
+        <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
       <TabletSettings>
         <SourceLocation DefaultValue="https://sawroclaw.github.io/index.html"/>
+        <RequestedHeight>250</RequestedHeight>
       </TabletSettings>
       <PhoneSettings>
         <SourceLocation DefaultValue="https://sawroclaw.github.io/index.html"/>
+        <RequestedHeight>250</RequestedHeight>
       </PhoneSettings>
     </Form>
   </FormSettings>
