@@ -1,0 +1,199 @@
+/* 
+ * Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license.
+ * See LICENSE in the project root for license information.
+ */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    color: #222;
+    background: #f6f8fb;
+    -webkit-font-smoothing: antialiased;
+}
+
+#app-body {
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+/* Lists */
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header / layout helpers from template */
+.ms-welcome__header {
+   padding: 20px;
+   padding-bottom: 30px;
+   padding-top: 100px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.ms-welcome__main {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: nowrap;
+   align-items: center;
+   flex: 1 0 0;
+   padding: 10px 20px;
+}
+
+.ms-welcome__main > h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.ms-welcome__features {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.ms-welcome__features.ms-List .ms-ListItem {
+    padding-bottom: 20px;
+    display: flex;
+}
+
+.ms-welcome__features.ms-List .ms-ListItem > .ms-Icon {
+    margin-right: 10px;
+}
+
+.ms-welcome__action.ms-Button--hero {
+    margin-top: 30px;
+}
+
+.ms-Button.ms-Button--hero .ms-Button-label {
+  color: #0078d7;
+}
+
+.ms-Button.ms-Button--hero:hover .ms-Button-label,
+.ms-Button.ms-Button--hero:focus .ms-Button-label {
+  color: #005a9e;
+  cursor: pointer;
+}
+
+b { font-weight: bold; }
+
+/* Panels: simple show/hide (no animations) */
+.panel {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 18px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* hidden = ukryj natychmiast */
+.panel.hidden {
+  display: none;
+}
+
+/* Card container used in panels */
+.card {
+  text-align: left;
+  padding: 16px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(16,24,40,0.06);
+  margin-top: 12px;
+  box-sizing: border-box;
+}
+
+/* Checkbox list: labels align items to the left */
+.checkbox-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-list label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+  font-size: 0.95rem;
+  color: #111827;
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: #0067c5;
+  flex: 0 0 auto;
+}
+
+/* Buttons */
+.actions { display:flex; justify-content:flex-end; gap:8px; margin-top:12px; }
+
+.btn-primary {
+  background: linear-gradient(180deg,#0078d7,#005a9e);
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-weight: 700;
+  border: none;
+  box-shadow: 0 6px 18px rgba(0,120,215,0.14);
+  cursor: pointer;
+}
+.btn-primary:hover { transform: translateY(-1px); }
+
+.btn-primary:active { transform: translateY(0); }
+.btn-primary:disabled { opacity: 0.6; cursor: not-allowed; box-shadow: none; }
+
+.btn-secondary {
+  background: #f3f5f7;
+  color: #111827;
+  border-radius: 6px;
+  padding: 8px 12px;
+  border: 1px solid rgba(16,24,40,0.04);
+  cursor: pointer;
+}
+.btn-secondary:hover { filter: brightness(0.98); }
+
+/* Result icon area */
+.result-icon {
+  width: 64px;
+  height: 64px;
+  margin: 8px auto 12px;
+  border-radius: 50%;
+  display: block;
+}
+
+/* Text styles */
+.muted { color: #6b7280; font-size: 0.95rem; }
+.center { display:block; margin-left:auto; margin-right:auto; }
+
+/* Result title centered */
+#result-title { text-align: center; margin: 8px 0; }
+
+/* Tile / hero styles (keeps inline-friendly structure used in HTML) */
+.ms-welcome__action.ms-Button--hero.column {
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Accessibility focus */
+.ms-welcome__action:focus,
+.tile:focus {
+  outline: 3px solid rgba(3,102,214,0.18);
+  outline-offset: 2px;
+}
+
+/* Responsive tweaks */
+@media (max-width:420px) {
+  .panel { padding: 12px; }
+  .card { padding: 12px; }
+  .actions { flex-direction: column-reverse; align-items: stretch; }
+  .btn-primary, .btn-secondary { width: 100%; }
+}
+
+/* End of file */
