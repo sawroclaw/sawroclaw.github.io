@@ -86,21 +86,22 @@ b {
   padding: 18px;
   text-align: center;
 
-  /* animacja wejścia/wyjścia */
+  /* stan domyślny (ukryty, gotowy do animacji przy pokazaniu) */
   opacity: 0;
-  transform: translateY(8px);
+  transform: translateY(10px) scale(0.995);
   transition: opacity 240ms ease, transform 240ms ease;
   pointer-events: none;
+  will-change: opacity, transform;
 }
 
 /* active = widoczny, hidden = schowany po animacji */
 .panel.active {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
   pointer-events: auto;
 }
-.panel.hidden { /* will be applied after hide transition to keep out of flow if needed */
-  /* keep display:block so animation runs; pointer-events off above */
+.panel.hidden {
+  display: none;
 }
 
 /* przycisk zamknij przenosi do pierwszego panelu (obsługa w JS) */
@@ -110,3 +111,63 @@ b {
 #result-title { text-align: center; margin: 8px 0; }
 
 /* zachowujemy istniejące .ms-welcome__action wyglądy (jeśli używasz inline style - nadal będą działać) */
+
+/* Przyciski (ładniejsze) */
+.btn-primary {
+  background: linear-gradient(180deg,#0078d7,#005a9e);
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-weight: 700;
+  border: none;
+  box-shadow: 0 6px 18px rgba(0,120,215,0.14);
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+.btn-primary:active { transform: translateY(1px); }
+.btn-primary:disabled { opacity: 0.6; cursor: not-allowed; box-shadow: none; }
+
+.btn-secondary {
+  background: #f3f5f7;
+  color: #111827;
+  border-radius: 6px;
+  padding: 8px 12px;
+  border: 1px solid rgba(16,24,40,0.04);
+}
+
+/* Checkboxy (bardziej dopracowane) */
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 8px;
+  accent-color: #0067c5;
+}
+
+/* Naprawa paneli: jedna spójna definicja + .hidden nie jest pusta */
+.panel {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 18px;
+  text-align: center;
+
+  /* stan domyślny (ukryty, gotowy do animacji przy pokazaniu) */
+  opacity: 0;
+  transform: translateY(10px) scale(0.995);
+  transition: opacity 240ms ease, transform 240ms ease;
+  pointer-events: none;
+  will-change: opacity, transform;
+}
+
+.panel.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* hidden ma teraz konkretną wartość — unika błędu "Do not use empty rulesets" */
+.panel.hidden {
+  display: none;
+}
+
+/* wynik: wyśrodkowany tytuł (już ustawione w JS) */
+#result-title { text-align: center; margin: 8px 0; }
