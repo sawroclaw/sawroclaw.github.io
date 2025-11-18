@@ -1,0 +1,42 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. -->
+<!-- This file shows how to design a first-run page that provides a welcome screen to the user about the features of the add-in. -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Report Phishing</title>
+
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <main id="app-body">
+        <h1>Zgłoś phishing</h1>
+
+        <!-- miejsce na temat aktywnej wiadomości (wypełnia taskpane.js) -->
+        <p><label id="item-subject"></label></p>
+
+        <!-- checkboxy zgłoszenia -->
+        <section id="phish-report">
+            <div>
+                <label><input type="checkbox" id="opt-answered"> Odpowiedziano na e-mail.</label><br>
+                <label><input type="checkbox" id="opt-downloaded"> Pobrano plik.</label><br>
+                <label><input type="checkbox" id="opt-opened"> Otworzono załącznik.</label><br>
+                <label><input type="checkbox" id="opt-visited"> Odwiedzono link.</label><br>
+                <label><input type="checkbox" id="opt-password"> Wprowadzono swoje hasło.</label><br>
+                <label><input type="checkbox" id="opt-forwarded"> Przesłano dalej ten e-mail.</label><br>
+                <label><input type="checkbox" id="opt-none"> Nie zrobiono nic z e-mailem.</label><br>
+            </div>
+
+            <div role="button" id="report-phish" class="btn-primary" style="margin-top:10px;">
+                Zgłoś phishing (wyślij)
+            </div>
+            <p id="phish-status" style="margin-top:8px; color:#666; font-size:0.9em;"></p>
+        </section>
+    </main>
+
+    <script src="taskpane.js"></script>
+</body>
+</html>
